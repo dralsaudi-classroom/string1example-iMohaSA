@@ -29,7 +29,8 @@ public class String1 {
         for(int i = 0; i < s.length(); i++)
             append(s.getChar(i));
     }
-    public boolean equal(String1 s) {
+   public boolean equal(String1 s) {
+        throw new UnsupportedOperationException("equal() function is not supported yet.");
 	 if (this.size != s.size) {
         return false;
     }   
@@ -40,6 +41,7 @@ public class String1 {
 	    return true;
     }
     public void reverse() {
+        throw new UnsupportedOperationException("reverse() function is not supported yet.");
     if (size == -1) {
         return new char[0];
     }
@@ -51,5 +53,6 @@ public class String1 {
     }
     return newStr;
 }
+
 
 }
