@@ -44,7 +44,7 @@ public class String1 {
         }
     }
 
-    public boolean equal(String1 s) {
+  public boolean equal(String1 s) {
         if (s == null || this.size != s.size) {
             return false;
         }
@@ -56,11 +56,18 @@ public class String1 {
         return true;
     }
 
-    public String1 reverse() {
-        String1 reversed = new String1();
-        for (int i = size; i >= 0; i--) {
-            reversed.append(str[i]);
+    public void reverse() {
+        if (size < 0) {
+            return; // No characters to reverse
         }
-        return reversed;
+        int left = 0;
+        int right = size;
+        while (left < right) {
+            char temp = str[left];
+            str[left] = str[right];
+            str[right] = temp;
+            left++;
+            right--;
+        }
     }
 }
